@@ -8,10 +8,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    
   </head>
 <body>
+    <%= render "layouts/navigation" %>
     <%= render "layouts/messages" %>
-    <%= yield %>
-
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+    <!-- This is temporary fix for popper error on dropdown-->
+    <script>var process = {env: {}};</script>
 </body>
 </html>
