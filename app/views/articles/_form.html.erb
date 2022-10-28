@@ -1,4 +1,4 @@
-<ul>
+<!--<ul>
     <% if @article.errors.any? %>
         <h2>The following errors prevented the article from saving:</h2>
 
@@ -6,8 +6,8 @@
             <li><%= error.full_message %></li>
         <% end %>
     <% end %> 
-</ul>  
-
+</ul>  -->
+<%= render 'shared/errors', obj: @article %>
 
 
 <%= form_for @article, data: { turbo: false } do |f| %>
